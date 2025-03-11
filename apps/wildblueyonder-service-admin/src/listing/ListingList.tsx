@@ -14,11 +14,12 @@ export const ListingList = (props: ListProps): React.ReactElement => {
   return (
     <List
       {...props}
+      bulkActionButtons={false}
       title={"listings"}
       perPage={50}
       pagination={<Pagination />}
     >
-      <Datagrid rowClick="show" bulkActionButtons={false}>
+      <Datagrid rowClick="show">
         <DateField source="createdAt" label="Created At" />
         <TextField label="discription" source="discription" />
         <TextField label="ID" source="id" />
@@ -38,7 +39,7 @@ export const ListingList = (props: ListProps): React.ReactElement => {
         <TextField label="placeType" source="placeType" />
         <TextField label="price" source="price" />
         <TextField label="title" source="title" />
-        <DateField source="updatedAt" label="Updated At" />{" "}
+        <DateField source="updatedAt" label="Updated At" />
       </Datagrid>
     </List>
   );
