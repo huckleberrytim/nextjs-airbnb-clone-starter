@@ -37,19 +37,21 @@ export const ListingCreate = (props: CreateProps): React.ReactElement => {
         <TextInput label="placeType" source="placeType" />
         <NumberInput label="price" source="price" />
         <TextInput label="title" source="title" />
-        <ReferenceArrayInput source="trips" reference="Trip">
-          <SelectArrayInput
-            optionText={TripTitle}
-            parse={(value: any) => value && value.map((v: any) => ({ id: v }))}
-            format={(value: any) => value && value.map((v: any) => v.id)}
-          />
+        <ReferenceArrayInput
+          source="trips"
+          reference="Trip"
+          parse={(value: any) => value && value.map((v: any) => ({ id: v }))}
+          format={(value: any) => value && value.map((v: any) => v.id)}
+        >
+          <SelectArrayInput optionText={TripTitle} />
         </ReferenceArrayInput>
-        <ReferenceArrayInput source="wishlists" reference="Wishlist">
-          <SelectArrayInput
-            optionText={WishlistTitle}
-            parse={(value: any) => value && value.map((v: any) => ({ id: v }))}
-            format={(value: any) => value && value.map((v: any) => v.id)}
-          />
+        <ReferenceArrayInput
+          source="wishlists"
+          reference="Wishlist"
+          parse={(value: any) => value && value.map((v: any) => ({ id: v }))}
+          format={(value: any) => value && value.map((v: any) => v.id)}
+        >
+          <SelectArrayInput optionText={WishlistTitle} />
         </ReferenceArrayInput>
       </SimpleForm>
     </Create>

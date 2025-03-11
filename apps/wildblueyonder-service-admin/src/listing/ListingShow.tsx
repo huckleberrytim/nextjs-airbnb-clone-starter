@@ -39,7 +39,7 @@ export const ListingShow = (props: ShowProps): React.ReactElement => {
         <TextField label="title" source="title" />
         <DateField source="updatedAt" label="Updated At" />
         <ReferenceManyField reference="Trip" target="listingId" label="trips">
-          <Datagrid rowClick="show" bulkActionButtons={false}>
+          <Datagrid rowClick="show">
             <DateField source="createdAt" label="Created At" />
             <TextField label="ID" source="id" />
             <ReferenceField
@@ -61,7 +61,7 @@ export const ListingShow = (props: ShowProps): React.ReactElement => {
           target="listingId"
           label="wishlists"
         >
-          <Datagrid rowClick="show" bulkActionButtons={false}>
+          <Datagrid rowClick="show">
             <DateField source="createdAt" label="Created At" />
             <TextField label="ID" source="id" />
             <ReferenceField

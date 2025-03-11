@@ -31,7 +31,7 @@ export const UserShow = (props: ShowProps): React.ReactElement => {
           target="listingCreatedById"
           label="listings"
         >
-          <Datagrid rowClick="show" bulkActionButtons={false}>
+          <Datagrid rowClick="show">
             <DateField source="createdAt" label="Created At" />
             <TextField label="discription" source="discription" />
             <TextField label="ID" source="id" />
@@ -55,7 +55,7 @@ export const UserShow = (props: ShowProps): React.ReactElement => {
           </Datagrid>
         </ReferenceManyField>
         <ReferenceManyField reference="Trip" target="userId" label="trips">
-          <Datagrid rowClick="show" bulkActionButtons={false}>
+          <Datagrid rowClick="show">
             <DateField source="createdAt" label="Created At" />
             <TextField label="ID" source="id" />
             <ReferenceField
@@ -77,7 +77,7 @@ export const UserShow = (props: ShowProps): React.ReactElement => {
           target="userId"
           label="wishlists"
         >
-          <Datagrid rowClick="show" bulkActionButtons={false}>
+          <Datagrid rowClick="show">
             <DateField source="createdAt" label="Created At" />
             <TextField label="ID" source="id" />
             <ReferenceField
